@@ -1,7 +1,7 @@
 let moviesData = [
     {
         id: "M1",
-        title: "The Yashfather",
+        title: "The Godfather",
         storyline: "A chilling portrait of the Corleone family's rise and near fall from power in America along with balancing the story of the Sicilian clan's ugly crime business in which they are engaged.",
         genres: [
             "Crime",
@@ -9,7 +9,7 @@ let moviesData = [
         ],
         duration: 177,
         poster_url: "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
-        trailer_url: "https://www.youtube.com/watch/?v=sY1S34973zA",
+        trailer_url: "https://www.youtube.com/watch?v=sY1S34973zA",
         wiki_url: "https://en.wikipedia.org/wiki/The_Godfather",
         release_date: "1972-03-15T00:00:00+05:30",
         censor_board_rating: "R",
@@ -22,7 +22,7 @@ let moviesData = [
                 "last_name": "Brando",
                 "role_type": "ACTOR",
                 "profile_description": "Marlon Brando Jr. was an American actor and film director. He is credited with bringing realism to film acting and helping to popularize the Stanislavski system of acting having studied with Stella Adler in the 1940s. Regarded for his cultural influence on 20th century film, Brando's Academy Award-winning performances include that of Terry Malloy in On the Waterfront (1954) and Don Vito Corleone in The Godfather (1972). Brando was an activist for many causes, notably the civil rights movement and various Native American movements.",
-                "profile_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Marlon_Brando_%28cropped%29.jpg",
+                "profile_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Marlon_Brando_publicity_for_One-Eyed_Jacks.png/800px-Marlon_Brando_publicity_for_One-Eyed_Jacks.png",
                 "wiki_url": "https://en.wikipedia.org/wiki/Marlon_Brando"
             },
             {
@@ -38,7 +38,7 @@ let moviesData = [
     },
     {
         id: "M2",
-        title: "The Dark Anurag",
+        title: "The Dark Knight",
         storyline: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
         genres: [
             "Action",
@@ -174,7 +174,7 @@ let moviesData = [
                 "last_name": "Rao",
                 "role_type": "ACTOR",
                 "profile_description": "Rajkummar Rao, also known as Rajkumar Yadav, is an Indian actor. He has established a career in Hindi cinema and is the recipient of several awards, including a National Film Award, three Filmfare Awards, and an Asia Pacific Screen Award. He is cited in the media as one of the most talented actors of his generation.",
-                "profile_url": "https://en.wikipedia.org/wiki/Rajkummar_Rao#/media/File:Rajkummar_Rao_World_Premiere_Newton_Zoopalast_Berlinale_2017_02.jpg",
+                "profile_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRNfOQSw2QSW3AhZSMyzALmh6RY8b8zsCd4_Wpk8ItemEfe1XkeaAABpt8N-Xs-urUecM&usqp=CAU",
                 "wiki_url": "https://en.wikipedia.org/wiki/Rajkummar_Rao"
             },
             {
@@ -213,6 +213,16 @@ let moviesData = [
                 "profile_description": "Anthony M. LaPaglia is an Australian actor. He played the role of Joe in the coming of age comedy Empire Records and John in the film Autumn In New York, as well as FBI agent Jack Malone on the American TV series Without a Trace, for which he won a Golden Globe Award for Best Actor â€“ Television Series Drama. He also appeared in 8 episodes of Frasier as Daphne Moon's alcoholic brother Simon.",
                 "profile_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Anthony_LaPaglia_and_Gia_Carides_at_the_Man_of_Steel_premiere_in_Sydney_%289123807673%29.jpg",
                 "wiki_url": "https://en.wikipedia.org/wiki/Anthony_LaPaglia"
+            },
+            {
+                "id": "A16",
+                "first_name": "Talitha",
+                "last_name": "Bateman",
+                "role_type": "ACTOR",
+                "profile_description": "Talitha Eliana Bateman is an American actress. After making her acting debut in a 2013 episode of the sitcom The Middle, she has starred in the independent drama film So B.",
+                "profile_url": "https://m.media-amazon.com/images/M/MV5BMjhlMGU1NTQtMzQ4Mi00MDMxLTk0NzctYmEyMTA2OTE3OWY1XkEyXkFqcGdeQXVyNDY5NTIyODI@._V1_.jpg",
+                "wiki_url": "https://en.wikipedia.org/wiki/Talitha_Bateman"
+
             }
         ]
     },

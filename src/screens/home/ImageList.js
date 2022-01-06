@@ -2,9 +2,6 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-// import ListSubheader from '@mui/material/ListSubheader';
-// import IconButton from '@mui/material/IconButton';
-// import InfoIcon from '@mui/icons-material/Info';
 
 export default function TitlebarImageList(props) {    
   return (       
@@ -19,15 +16,7 @@ export default function TitlebarImageList(props) {
             loading="lazy"
           />
           <ImageListItemBar
-            title={item.title}
-            // actionIcon={
-            //   <IconButton
-            //     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-            //     aria-label={`info about ${item.title}`}
-            //   >
-            //     <InfoIcon />
-            //   </IconButton>
-            // }
+            title={item.title}           
           />
         </ImageListItem>
       ))}

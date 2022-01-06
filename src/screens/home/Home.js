@@ -1,11 +1,11 @@
 import React from "react";
-import Header from '../../common/header/Header.js';
 import { Component } from "react";
 import './Home.css';
 import MovieData from '../../common/moviesData.js';
 import ImageList from './ImageList.js';
 import RegularImageList from './RegularImageList';
 import FilterCard from './FilterCard.js';
+import AppContext from "../../AppContext";
 
 
 class Home extends Component{
@@ -19,27 +19,13 @@ class Home extends Component{
             endDate: '' ,
             name: ''                  
         };
-        this.setState= this.setState.bind(this)
-    }   
+        this.setState= this.setState.bind(this);
+    }
+    static contextType = AppContext;
 
-    // movieListHandler =(event)=>{
-    //     event.preventDefault();
-    //     console.log(event.target.title.value)
-    //     if(MovieData && MovieData.length>0){
-    //         console.log("before filter", MovieData)
-    //         const newList = MovieData.filter(item =>{            
-    //             if(item.title === (event.target.title)){
-    //                 console.log("after", newList);
-    //                 return this.setState({newList:  });
-                    
-    //         }
-    //         })
-    //     }
-    //   }
     
     render(){
-        return <div>
-                    <Header/>
+        return <div>                    
                     <div className="heading">
                         <span>Upcoming Movies</span>                        
                     </div>
@@ -48,7 +34,7 @@ class Home extends Component{
                     </div>
                     <div className="flex-container">
                         <div className="left">
-                           <RegularImageList filterState={this.state} movieData={MovieData}/>
+                           <RegularImageList imageOnClick={this.context.setBookShowValue} filterState={this.state} movieData={MovieData}/>
                         </div>
                         <div className="right">
                             <FilterCard  setFilterState={this.setState}/>
