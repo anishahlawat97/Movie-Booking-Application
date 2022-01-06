@@ -49,6 +49,7 @@ body{
     background-color: #EEEEEE;
 }
 
-/* .posterImage{
-    border: 2px solid red;
-} */
+#threeDivs{
+    display: flex;
+    flex-direction: row;
+}

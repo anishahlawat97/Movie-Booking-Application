@@ -8,7 +8,7 @@ export default function TitlebarImageList(props) {
     <ImageList  sx={{ width: '120%', height: 380, gridAutoFlow: 'column'}} cols={6} >      
       {
       props.movieData.map((item) => (
-        <ImageListItem key={item.id} rowHeight={250}>
+        <ImageListItem key={item.id}>
           <img          
             src={`${item.poster_url}?w=248&fit=crop&auto=format`}
             srcSet={`${item.poster_url}?w=248&fit=crop&auto=format&dpr=2 2x`}

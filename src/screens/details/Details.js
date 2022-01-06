@@ -11,10 +11,8 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import AppContext from "../../AppContext";
 
 function Details() {
-    const { id } = useParams();
-    console.log(MovieList);
-
-     const context = useContext(AppContext)
+    const { id } = useParams();    
+    const context = useContext(AppContext);
 
     const opts = {
         height: '420',
@@ -35,16 +33,18 @@ function Details() {
         var match = url.match(regExp);
         return (match&&match[7].length==11)? match[7] : false;
     }
+
       const bookClickHandler = () =>{
           context.setBookShowValue(false);
       }
+
     return (
         <>            
             <div id="main-container">
                 {
                 MovieList.filter(item => item.id === id)
                     .map(item => (                           
-                        <>                       
+                        <div id="threeDivs" key={item.id}>                       
                             <div id="left">
                                 <Typography sx={{ mt: '8px', ml: '24px', mb: '0px', height: '24px', cursor: 'pointer' }}>
                                     <Link onClick={bookClickHandler} to='/' className="backLink"> &lt; Back To Home </Link>
@@ -62,7 +62,7 @@ function Details() {
                                 <YouTube id="trailer" videoId={youtube_parser(item.trailer_url)} opts={opts} onReady={(e)=>videoOnReady(e)} />  
                             </div>
                             <div id="right">
-                                <Typography sx={{mt: '8px', fontWeight: 'bold'}}>Rate this movie: <StarIcon/></Typography>
+                                <Typography sx={{mt: '8px', fontWeight: 'bold'}}>Rate this movie: </Typography><StarIcon/>
                                 <Typography sx={{fontWeight: 'bold', mt: '16px', mb: '16px'}}>Artists: </Typography> 
                                 { /* Image list for the artists*/ }           
                                 <ImageList sx={{width: 350, height: 250, gridAutoFlow: 'column',  }} gap={15} cols={2}> 
@@ -81,12 +81,11 @@ function Details() {
                                     ))}                                
                                 </ImageList>                                
                             </div>
-                        </>
+                        </div>
                     ))
                 }
             </div>
         </>
     );
-
 }
 export default Details;

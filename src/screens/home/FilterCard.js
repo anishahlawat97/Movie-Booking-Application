@@ -1,18 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
-// import { light } from '@mui/material/styles/createPalette';
-// import { createGenerateClassName, ThemeProvider } from '@mui/styles';
 import { Select, MenuItem, Input, InputLabel, FormControl, Checkbox, TextField, ListItemText } from '@mui/material';
 import genre from '../../common/genre';
 import artists from '../../common/artists';
-import moviesData from '../../common/moviesData';
-import RegularImageLIst from './RegularImageList.js';
 import { createTheme } from '@mui/system';
 
 
@@ -31,16 +25,6 @@ export default function FilterCard(props) {
     const [movieName, setMovieName] = React.useState('');
     const [startDate, setStartDate] = React.useState('');
     const [endDate, setEndDate] = React.useState('');
-    
-    // const [movieList, setMovieList] = React.useState([]);
-    // const [finalMovieList, setFinalMovieList] = React.useState([]);
-
-    // React.useEffect(()=>{
-    //     const data= moviesData;
-    //     setMovieList(data);
-    //     setFinalMovieList(data);
-    // },[])
-
 
   const handleChange1 = (event) => {
     const { target: { value } } = event;
@@ -91,18 +75,6 @@ export default function FilterCard(props) {
           
       }
   })
-
-//   const formHandler =(nameChangeHandler, handleChange1, handleChange2, dateChangeHandler1, dateChangeHandler2)=>{
-//     if(finalMovieList && finalMovieList.length>0){
-//         console.log("before filter", finalMovieList)
-//         const newList = moviesData.filter(item =>{            
-//             if(item.title == (nameChangeHandler)){
-//                 setFinalMovieList(newList);
-//                 console.log("after", newList);
-//         }
-//         })
-//     }
-//   }
     return (
         
         <Card sx={{ minWidth: 240,  m: 4 }}>
@@ -156,22 +128,16 @@ export default function FilterCard(props) {
                     </Select>
                 </FormControl>
                 <FormControl sx={{m:theme.spacing(1), mt:2, minWidth: 240, maxWidth: 240}}>
-                    <InputLabel shrink={true} htmlFor='dateStart'>Release Date Start</InputLabel>
-                    <TextField onChange={(e)=>dateChangeHandler1(e)} variant='standard' shrink type='date'></TextField>
+                    <InputLabel shrink htmlFor='dateStart'>Release Date Start</InputLabel>
+                    <TextField onChange={(e)=>dateChangeHandler1(e)} variant='standard' type='date'></TextField>
                 </FormControl>    
                 <FormControl sx={{m:theme.spacing(1), mt:2, minWidth: 240, maxWidth: 240}}>
-                    <InputLabel shrink={true} htmlFor='dateEnd'>Release Date End</InputLabel>
-                    <TextField onChange={(e)=>dateChangeHandler2(e)} id='dateEnd'  variant='standard' shrink type='date'></TextField>
+                    <InputLabel shrink htmlFor='dateEnd'>Release Date End</InputLabel>
+                    <TextField onChange={(e)=>dateChangeHandler2(e)} id='dateEnd'  variant='standard' type='date'></TextField>
                 </FormControl>  
                 <Button type='submit' onClick={filterClickHandler} fullWidth variant='contained' sx={{mt:2, color: 'primary', minWidth: 240}} >APPLY</Button> 
                 <Button type='submit' onClick={resetClickHandler} fullWidth variant='contained' sx={{mt:2, color: 'primary', minWidth: 240}} >RESET</Button>                            
             </CardContent>           
-        </Card> 
-          
-    );  
-           
-        
-
-   
-    
+        </Card>           
+    );     
 }
